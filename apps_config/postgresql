@@ -1,0 +1,5 @@
+!#/bin/bash
+
+psql -c "CREATE USER gitrob WITH PASSWORD 'changeme';"
+createdb -O gitrob gitrob
+psql -c "GRANT ALL PRIVILEGES ON DATABASE gitrob to gitrob;"
