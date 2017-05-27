@@ -11,8 +11,9 @@ gitrob_config="/root/.gitrobrc"
 echo "---" > $gitrob_config
 echo "sql_connection_uri: postgres://"$username":"$password"@"$host":"$port"/"$db >> $gitrob_config
 echo "github_access_tokens:" >> $gitrob_config
-echo "- "$token >> $gitrob_confi
+echo "- "$token >> $gitrob_config
 
 echo "user accepted" > /var/lib/gems/2.3.0/gems/gitrob-1.1.2/agreement.txt
 
+#gitrob -b 0.0.0.0 --no-color -o $1
 exec tail -f /dev/null

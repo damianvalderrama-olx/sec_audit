@@ -12,8 +12,8 @@ services:
       restart: always
       build: ./images/gitrob
       image: gitrob:1.0
-      #ports:
-      #  - "9393"
+      ports:
+        - "9393:9393"
       links:
         - postgres:postgres
       env_file: images/gitrob/.gitrob.env
