@@ -18,3 +18,5 @@ services:
         - postgres:postgres
       env_file: images/gitrob/.gitrob.env
       entrypoint: ["/rootfs/gitrob_init.sh"]
+      depends_on:
+        - postgres 
