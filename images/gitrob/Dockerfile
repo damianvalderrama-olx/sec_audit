@@ -1,4 +1,5 @@
 FROM ubuntu:16.04
+MAINTAINER damian.valderrama@olx.com
 
 RUN apt-get update && apt-get install -y \
         ruby2.3-dev \
